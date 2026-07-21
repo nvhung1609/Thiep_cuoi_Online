@@ -136,8 +136,8 @@ export default function AudioPlayer({ petalsActive, setPetalsActive }) {
   }, [isPlaying]);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
-      {/* HTML5 Audio Element with relative path */}
+    <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-3 items-end">
+      {/* HTML5 Audio Element */}
       <audio ref={audioRef} src={weddingAudioUrl} loop preload="auto" />
 
       {/* Petals Toggle */}
