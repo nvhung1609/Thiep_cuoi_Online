@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-silk: #faf8f5;
+    --color-bg-card: #ffffff;
+    --color-gold: #c59b27;
+    --color-text-dark: #2d2621;
+    --color-text-muted: #6e655f;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #faf8f5;
+    color: #2d2621;
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Original Typography Classes */
+.font-script {
+  font-family: 'Great Vibes', 'Alex Brush', cursive !important;
+}
+
+.font-heading {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif !important;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif !important;
+}
+
+.font-numeric {
+  font-family: 'Montserrat', sans-serif !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-weight: 600 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #faf8f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #c59b27;
+  border-radius: 4px;
+}
+
+/* Canvas Overlay */
+#petal-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 40;
+}
