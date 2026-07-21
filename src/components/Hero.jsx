@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Image with Dark Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/hero-couple.png"
+          src="./assets/hero-couple.png"
           alt="Nguyễn Việt Hưng & Nguyễn Thị Ngọc Tuyền"
           className="w-full h-full object-cover object-top opacity-55 scale-105 transition-transform duration-1000"
         />
@@ -31,7 +31,7 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* Hero Central Titles - Restored Original Great Vibes & Cormorant Garamond */}
+      {/* Hero Central Titles */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}

@@ -7,8 +7,8 @@ export default function AudioPlayer({ petalsActive, setPetalsActive }) {
   const audioCtxRef = useRef(null);
   const intervalRef = useRef(null);
 
-  // Local MP3 Audio Path for Bến Xe Miền Tây Feat Củ Bê
-  const weddingAudioUrl = "/assets/ben-xe-mien-tay-feat-cu-be.mp3";
+  // Relative MP3 Audio Path for Bến Xe Miền Tây Feat Củ Bê (Works on both Local & GitHub Pages)
+  const weddingAudioUrl = "./assets/ben-xe-mien-tay-feat-cu-be.mp3";
 
   // Web Audio Synth Fallback if audio fails
   const playSynthFallback = () => {
@@ -137,7 +137,7 @@ export default function AudioPlayer({ petalsActive, setPetalsActive }) {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
-      {/* HTML5 Audio Element */}
+      {/* HTML5 Audio Element with relative path */}
       <audio ref={audioRef} src={weddingAudioUrl} loop preload="auto" />
 
       {/* Petals Toggle */}

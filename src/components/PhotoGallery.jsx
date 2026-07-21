@@ -6,13 +6,13 @@ export default function PhotoGallery() {
   const [selectedImg, setSelectedImg] = useState(null);
 
   const photos = [
-    { id: 1, src: '/assets/hero-couple.png', title: 'Save The Date - Vũ Tùng & Diệp Anh' },
-    { id: 2, src: '/assets/gallery-1.png', title: 'Hoàng Hôn Trên Biển' },
-    { id: 3, src: '/assets/gallery-2.png', title: 'Nhẫn Cưới Yêu Thương' },
-    { id: 4, src: '/assets/gallery-3.png', title: 'Nụ Cười Rạng Rỡ' },
-    { id: 5, src: '/assets/gallery-4.png', title: 'Đêm Tiệc Lãng Mạn' },
-    { id: 6, src: '/assets/groom.png', title: 'Chú Rể Phan Vũ Tùng' },
-    { id: 7, src: '/assets/bride.png', title: 'Cô Dâu Vũ Diệp Anh' },
+    { id: 1, src: './assets/hero-couple.png', title: 'Save The Date - Việt Hưng & Ngọc Tuyền' },
+    { id: 2, src: './assets/gallery-1.png', title: 'Hoàng Hôn Trên Biển' },
+    { id: 3, src: './assets/gallery-2.png', title: 'Nhẫn Cưới Yêu Thương' },
+    { id: 4, src: './assets/gallery-3.png', title: 'Nụ Cười Rạng Rỡ' },
+    { id: 5, src: './assets/gallery-4.png', title: 'Đêm Tiệc Lãng Mạn' },
+    { id: 6, src: './assets/groom.png', title: 'Chú Rể Nguyễn Việt Hưng' },
+    { id: 7, src: './assets/bride.png', title: 'Cô Dâu Nguyễn Thị Ngọc Tuyền' },
   ];
 
   return (

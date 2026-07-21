@@ -13,7 +13,7 @@ export default function ParentsAndCouple() {
         <div className="w-16 h-0.5 bg-amber-800/40 mx-auto mt-3"></div>
       </div>
 
-      {/* Parents Overview Banner matching Reference Image */}
+      {/* Parents Overview Banner */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function ParentsAndCouple() {
         >
           <div className="relative w-60 h-72 rounded-2xl overflow-hidden mb-6 border-2 border-stone-100 shadow-sm">
             <img
-              src="/assets/groom.png"
+              src="./assets/groom.png"
               alt="Chú rể Nguyễn Việt Hưng"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -87,7 +87,7 @@ export default function ParentsAndCouple() {
         >
           <div className="relative w-60 h-72 rounded-2xl overflow-hidden mb-6 border-2 border-stone-100 shadow-sm">
             <img
-              src="/assets/bride.png"
+              src="./assets/bride.png"
               alt="Cô dâu Nguyễn Thị Ngọc Tuyền"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
