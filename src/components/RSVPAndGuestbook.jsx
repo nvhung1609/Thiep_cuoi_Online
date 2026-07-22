@@ -73,10 +73,10 @@ export default function RSVPAndGuestbook() {
             "Sự hiện diện của quý vị là niềm vinh hạnh và hạnh phúc lớn nhất của gia đình chúng tôi."
           </p>
 
-          {/* Black GỬI PHẢN HỒI button */}
+          {/* Black GỬI PHẢN HỒI button with exact font as Sao chép STK button */}
           <button
             onClick={handleOpenModal}
-            className="bg-stone-950 hover:bg-black text-white px-10 py-4 rounded-2xl font-heading font-semibold tracking-[0.2em] text-xs sm:text-sm uppercase shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer border border-stone-800"
+            className="bg-stone-900 hover:bg-black text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-sans font-bold tracking-wider text-xs sm:text-sm uppercase shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer border border-stone-800"
           >
             GỬI PHẢN HỒI
           </button>
