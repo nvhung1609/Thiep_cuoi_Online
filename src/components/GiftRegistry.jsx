@@ -8,7 +8,7 @@ export default function GiftRegistry() {
 
   const groomBank = {
     owner: 'NGUYỄN VIỆT HƯNG',
-    bankName: 'Vietcombank (Ngân hàng TMCP Ngoại Thương)',
+    bankName: 'Vietcombank',
     accNumber: '9338812063',
     displayAcc: '9338 8120 63',
     qrImg: 'https://img.vietqr.io/image/VCB-9338812063-compact2.png?accountName=NGUYEN%20VIET%20HUNG',
@@ -17,7 +17,7 @@ export default function GiftRegistry() {
 
   const brideBank = {
     owner: 'NGUYỄN THỊ NGỌC TUYỀN',
-    bankName: 'ACB (Ngân hàng TMCP Á Châu)',
+    bankName: 'ACB',
     accNumber: '4646161',
     displayAcc: '4646 161',
     qrImg: 'https://img.vietqr.io/image/ACB-4646161-compact2.png?accountName=NGUYEN%20THI%20NGOC%20TUYEN',
@@ -31,61 +31,61 @@ export default function GiftRegistry() {
   };
 
   return (
-    <section id="gift-section" className="py-16 sm:py-20 px-4 bg-[#F5F2EC] text-stone-900 relative border-t border-[#E5E0D8]">
+    <section id="gift-section" className="py-16 sm:py-20 px-3 sm:px-4 bg-[#F5F2EC] text-stone-900 relative border-t border-[#E5E0D8] overflow-hidden">
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        <div className="flex justify-center items-center gap-2 text-stone-700 mb-2">
+        <div className="flex justify-center items-center gap-2 text-stone-700 mb-1">
           <Gift className="w-5 h-5 text-amber-900" />
-          <span className="font-script text-3xl block text-amber-900 font-bold">Hộp Mừng Cưới</span>
+          <span className="font-script text-3xl sm:text-4xl block text-amber-900 font-bold">Mừng Cưới</span>
         </div>
-        <h2 className="font-heading text-2xl sm:text-4xl font-bold tracking-wide uppercase text-stone-950 mb-3">
-          MỪNG CƯỚI CHÚ RỂ & CÔ DÂU
+        <h2 className="font-heading text-xs xs:text-sm sm:text-2xl md:text-3xl font-bold tracking-wider sm:tracking-widest uppercase text-stone-900 mb-3 px-1 leading-snug">
+          MỪNG CƯỚI SỚM CHO CÔ DÂU VÀ CHÚ RỂ
         </h2>
-        <p className="text-stone-700 text-xs sm:text-sm max-w-xl mx-auto mb-10 sm:mb-14 font-medium leading-relaxed px-2">
-          Sự hiện diện của quý vị là niềm hạnh phúc lớn nhất của chúng tôi. Nếu quý vị muốn gửi lời chúc mừng qua tài khoản, xin vui lòng quét mã QR hoặc sao chép thông tin bên dưới:
-        </p>
+        <div className="w-16 h-0.5 bg-amber-800/40 mx-auto mt-2 mb-8 sm:mb-10"></div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+        {/* Cards Grid (Compact Side-by-Side 2 Columns on All Devices) */}
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-6 md:gap-8 max-w-4xl mx-auto items-stretch">
           {/* Groom Bank Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E0D8] shadow-sm flex flex-col justify-between"
+            className="bg-white rounded-3xl p-2.5 xs:p-3 sm:p-6 border border-[#E5E0D8] shadow-sm flex flex-col justify-between text-center"
           >
             <div>
-              <span className="text-[11px] uppercase tracking-widest font-bold text-stone-700 bg-[#F5F2EC] px-4 py-1 rounded-full border border-stone-200">
+              <span className="text-[8.5px] xs:text-[9.5px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-bold text-stone-700 bg-[#F5F2EC] px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border border-stone-200 inline-block whitespace-nowrap">
                 MỪNG CƯỚI CHÚ RỂ
               </span>
 
-              <h3 className="font-heading text-xl sm:text-2xl font-bold text-stone-950 tracking-wide mt-4">{groomBank.owner}</h3>
-              <p className="text-stone-600 text-xs mt-1 font-medium">{groomBank.bankName}</p>
+              <h3 className="font-heading text-xs xs:text-sm sm:text-lg md:text-xl font-bold text-stone-950 tracking-wide mt-2 sm:mt-3 leading-tight">
+                {groomBank.owner}
+              </h3>
+              <p className="text-stone-600 text-[10px] xs:text-xs mt-0.5 font-semibold text-amber-900/90">{groomBank.bankName}</p>
 
               {/* VietQR Display */}
               <div
                 onClick={() => setActiveQrModal(groomBank)}
-                className="my-5 relative cursor-pointer w-44 h-44 sm:w-48 sm:h-48 mx-auto p-2 bg-white rounded-2xl border border-stone-300 shadow-sm overflow-hidden hover:scale-105 transition-transform duration-300"
+                className="my-2 sm:my-3.5 relative cursor-pointer w-full max-w-[115px] xs:max-w-[125px] sm:max-w-[160px] aspect-square mx-auto p-1 sm:p-1.5 bg-white rounded-2xl border border-stone-300 shadow-sm overflow-hidden hover:scale-105 transition-transform duration-300"
               >
                 <img src={groomBank.qrImg} alt="QR Chú Rể" className="w-full h-full object-contain" />
               </div>
+            </div>
 
-              {/* Account Number & Copy */}
-              <div className="bg-[#FAF8F5] p-4 rounded-2xl border border-[#E5E0D8] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                <div className="text-center sm:text-left">
-                  <span className="text-[10px] text-stone-600 uppercase tracking-widest block font-bold">Số tài khoản (STK):</span>
-                  <span className="font-numeric text-lg sm:text-xl font-bold text-stone-950 tracking-wider">
-                    {groomBank.displayAcc}
-                  </span>
-                </div>
-                <button
-                  onClick={() => copyToClipboard(groomBank.accNumber, 'groom')}
-                  className="w-full sm:w-auto min-h-[44px] px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-black text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm active:scale-95"
-                >
-                  {copiedBank === 'groom' ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-                  <span>{copiedBank === 'groom' ? 'Đã sao chép' : 'Sao chép STK'}</span>
-                </button>
+            {/* Account Number & Copy */}
+            <div className="bg-[#FAF8F5] p-2 sm:p-3 rounded-2xl border border-[#E5E0D8] flex flex-col items-center justify-between gap-1.5 mt-1">
+              <div className="text-center">
+                <span className="text-[8.5px] sm:text-[9.5px] text-stone-600 uppercase tracking-wider block font-bold">Số tài khoản:</span>
+                <span className="font-numeric text-xs xs:text-sm sm:text-lg font-bold text-stone-950 tracking-wider">
+                  {groomBank.displayAcc}
+                </span>
               </div>
+              <button
+                onClick={() => copyToClipboard(groomBank.accNumber, 'groom')}
+                className="w-full py-1.5 px-2 sm:px-3 rounded-xl bg-stone-900 hover:bg-black text-white font-bold text-[9px] xs:text-[10px] sm:text-xs transition-all flex items-center justify-center gap-1 cursor-pointer shadow-sm active:scale-95"
+              >
+                {copiedBank === 'groom' ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
+                <span>{copiedBank === 'groom' ? 'Đã sao chép' : 'Sao chép STK'}</span>
+              </button>
             </div>
           </motion.div>
 
@@ -95,40 +95,42 @@ export default function GiftRegistry() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="bg-white rounded-3xl p-6 sm:p-8 border border-[#E5E0D8] shadow-sm flex flex-col justify-between"
+            className="bg-white rounded-3xl p-2.5 xs:p-3 sm:p-6 border border-[#E5E0D8] shadow-sm flex flex-col justify-between text-center"
           >
             <div>
-              <span className="text-[11px] uppercase tracking-widest font-bold text-stone-700 bg-[#F5F2EC] px-4 py-1 rounded-full border border-stone-200">
+              <span className="text-[8.5px] xs:text-[9.5px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-bold text-stone-700 bg-[#F5F2EC] px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border border-stone-200 inline-block whitespace-nowrap">
                 MỪNG CƯỚI CÔ DÂU
               </span>
 
-              <h3 className="font-heading text-xl sm:text-2xl font-bold text-stone-950 tracking-wide mt-4">{brideBank.owner}</h3>
-              <p className="text-stone-600 text-xs mt-1 font-medium">{brideBank.bankName}</p>
+              <h3 className="font-heading text-xs xs:text-sm sm:text-lg md:text-xl font-bold text-stone-950 tracking-wide mt-2 sm:mt-3 leading-tight">
+                {brideBank.owner}
+              </h3>
+              <p className="text-stone-600 text-[10px] xs:text-xs mt-0.5 font-semibold text-amber-900/90">{brideBank.bankName}</p>
 
               {/* VietQR Display */}
               <div
                 onClick={() => setActiveQrModal(brideBank)}
-                className="my-5 relative cursor-pointer w-44 h-44 sm:w-48 sm:h-48 mx-auto p-2 bg-white rounded-2xl border border-stone-300 shadow-sm overflow-hidden hover:scale-105 transition-transform duration-300"
+                className="my-2 sm:my-3.5 relative cursor-pointer w-full max-w-[115px] xs:max-w-[125px] sm:max-w-[160px] aspect-square mx-auto p-1 sm:p-1.5 bg-white rounded-2xl border border-stone-300 shadow-sm overflow-hidden hover:scale-105 transition-transform duration-300"
               >
                 <img src={brideBank.qrImg} alt="QR Cô Dâu" className="w-full h-full object-contain" />
               </div>
+            </div>
 
-              {/* Account Number & Copy */}
-              <div className="bg-[#FAF8F5] p-4 rounded-2xl border border-[#E5E0D8] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                <div className="text-center sm:text-left">
-                  <span className="text-[10px] text-stone-600 uppercase tracking-widest block font-bold">Số tài khoản (STK):</span>
-                  <span className="font-numeric text-lg sm:text-xl font-bold text-stone-950 tracking-wider">
-                    {brideBank.displayAcc}
-                  </span>
-                </div>
-                <button
-                  onClick={() => copyToClipboard(brideBank.accNumber, 'bride')}
-                  className="w-full sm:w-auto min-h-[44px] px-4 py-2.5 rounded-xl bg-stone-900 hover:bg-black text-white font-bold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm active:scale-95"
-                >
-                  {copiedBank === 'bride' ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-                  <span>{copiedBank === 'bride' ? 'Đã sao chép' : 'Sao chép STK'}</span>
-                </button>
+            {/* Account Number & Copy */}
+            <div className="bg-[#FAF8F5] p-2 sm:p-3 rounded-2xl border border-[#E5E0D8] flex flex-col items-center justify-between gap-1.5 mt-1">
+              <div className="text-center">
+                <span className="text-[8.5px] sm:text-[9.5px] text-stone-600 uppercase tracking-wider block font-bold">Số tài khoản:</span>
+                <span className="font-numeric text-xs xs:text-sm sm:text-lg font-bold text-stone-950 tracking-wider">
+                  {brideBank.displayAcc}
+                </span>
               </div>
+              <button
+                onClick={() => copyToClipboard(brideBank.accNumber, 'bride')}
+                className="w-full py-1.5 px-2 sm:px-3 rounded-xl bg-stone-900 hover:bg-black text-white font-bold text-[9px] xs:text-[10px] sm:text-xs transition-all flex items-center justify-center gap-1 cursor-pointer shadow-sm active:scale-95"
+              >
+                {copiedBank === 'bride' ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
+                <span>{copiedBank === 'bride' ? 'Đã sao chép' : 'Sao chép STK'}</span>
+              </button>
             </div>
           </motion.div>
         </div>

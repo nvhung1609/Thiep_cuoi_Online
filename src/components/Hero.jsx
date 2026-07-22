@@ -43,33 +43,33 @@ export default function Hero() {
           Save the Date
         </h2>
 
-        {/* Couple Names */}
-        <div className="my-6 space-y-1 overflow-hidden px-2">
-          <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold tracking-wider text-white drop-shadow-md uppercase whitespace-nowrap">
+        {/* Couple Names - Harmonized Sizing */}
+        <div className="my-6 space-y-2 overflow-hidden px-2">
+          <h1 className="font-heading text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider text-white drop-shadow-md uppercase">
             NGUYỄN VIỆT HƯNG
           </h1>
           
           <div className="flex items-center justify-center gap-4 my-2">
-            <span className="h-[1px] w-16 bg-amber-400/50"></span>
-            <span className="font-script text-4xl text-amber-300">&</span>
-            <span className="h-[1px] w-16 bg-amber-400/50"></span>
+            <span className="h-[1px] w-12 sm:w-16 bg-amber-400/50"></span>
+            <span className="font-script text-3xl sm:text-4xl text-amber-300">&</span>
+            <span className="h-[1px] w-12 sm:w-16 bg-amber-400/50"></span>
           </div>
 
-          <h1 className="font-heading text-2xl md:text-4xl lg:text-5xl font-bold tracking-wider text-white drop-shadow-md uppercase whitespace-nowrap">
+          <h1 className="font-heading text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider text-white drop-shadow-md uppercase">
             NGUYỄN THỊ NGỌC TUYỀN
           </h1>
         </div>
 
         {/* Date Display */}
-        <div className="mt-8 inline-flex items-center gap-6 px-8 py-3 rounded-full bg-stone-900/80 border border-amber-500/40 backdrop-blur-md shadow-2xl">
-          <Calendar className="w-5 h-5 text-amber-400" />
-          <span className="font-cinzel text-xl md:text-2xl text-amber-200 tracking-widest font-semibold">
+        <div className="mt-6 sm:mt-8 inline-flex items-center gap-4 sm:gap-6 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full bg-stone-900/80 border border-amber-500/40 backdrop-blur-md shadow-2xl">
+          <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />
+          <span className="font-cinzel text-lg sm:text-xl md:text-2xl text-amber-200 tracking-widest font-semibold">
             14 . 07 . 2026
           </span>
         </div>
 
-        <p className="mt-4 text-stone-300 italic text-sm md:text-base font-light">
-          "Trân trọng kính mời quý khách tới tham dự khoảnh khắc hạnh phúc nhất trong cuộc đời chúng tôi"
+        <p className="mt-4 text-stone-300 italic text-xs sm:text-sm md:text-base font-light max-w-xl mx-auto px-4">
+          "Trân trọng kính mời Quý quan khách tới tham dự và chúc phúc cho ngày trọng đại của chúng tôi!"
         </p>
       </motion.div>
 

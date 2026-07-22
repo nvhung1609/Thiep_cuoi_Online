@@ -40,7 +40,7 @@ export default function Countdown() {
   ];
 
   return (
-    <section className="py-16 px-4 max-w-5xl mx-auto">
+    <section className="py-16 sm:py-20 px-3 sm:px-4 max-w-5xl mx-auto overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -48,16 +48,17 @@ export default function Countdown() {
         transition={{ duration: 0.8 }}
         className="text-center"
       >
-        <div className="flex items-center justify-center gap-2 text-stone-700 mb-2">
-          <Clock className="w-4 h-4 text-amber-800" />
-          <span className="font-heading text-xs tracking-widest uppercase font-bold text-stone-700">
+        <div className="flex items-center justify-center gap-2 text-stone-700 mb-1">
+          <Clock className="w-4 h-4 text-amber-900" />
+          <span className="font-sans text-amber-900 text-xs sm:text-sm tracking-[0.25em] font-bold uppercase">
             ĐẾM NGƯỢC ĐẾN NGÀY VUI
           </span>
         </div>
 
-        <h2 className="font-heading text-2xl md:text-4xl font-bold text-stone-900 mb-10 tracking-wide">
+        <h2 className="font-heading text-xl sm:text-3xl md:text-4xl font-bold text-stone-900 tracking-widest uppercase">
           CÙNG ĐỢI CHỜ KHOẢNH KHẮC TRỌNG ĐẠI
         </h2>
+        <div className="w-16 h-0.5 bg-amber-800/40 mx-auto mt-3 mb-10"></div>
 
         {/* Countdown Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto">
