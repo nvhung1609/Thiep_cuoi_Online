@@ -7,8 +7,8 @@ export default function AudioPlayer({ petalsActive, setPetalsActive }) {
   const audioCtxRef = useRef(null);
   const intervalRef = useRef(null);
 
-  // Relative MP3 Audio Path for Bến Xe Miền Tây Feat Củ Bê (Works on both Local & GitHub Pages)
-  const weddingAudioUrl = "./assets/ben-xe-mien-tay-feat-cu-be.mp3";
+  // Relative Audio Path for Nơi Em Về Làm Dâu - Út Nhị Mino (Works on both Local & GitHub Pages)
+  const weddingAudioUrl = "./assets/noi-em-ve-lam-dau.m4a";
 
   // Web Audio Synth Fallback if audio fails
   const playSynthFallback = () => {
@@ -159,7 +159,7 @@ export default function AudioPlayer({ petalsActive, setPetalsActive }) {
       {/* Audio Toggle Button */}
       <button
         onClick={toggleMusic}
-        title={isPlaying ? 'Dừng Nhạc' : 'Bật Nhạc (Bến Xe Miền Tây)'}
+        title={isPlaying ? 'Dừng Nhạc' : 'Bật Nhạc (Nơi Em Về Làm Dâu)'}
         className={`relative group p-3.5 rounded-full shadow-lg backdrop-blur-md transition-all duration-300 flex items-center justify-center border cursor-pointer ${
           isPlaying
             ? 'bg-amber-600 text-white border-amber-400 scale-105 shadow-md animate-pulse'

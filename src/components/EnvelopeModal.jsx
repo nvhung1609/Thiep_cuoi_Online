@@ -17,7 +17,7 @@ export default function EnvelopeModal({ onOpen }) {
       colors: ['#c5a059', '#e8e4dc', '#ffffff', '#d4af37', '#f3d372'],
     });
 
-    // Dispatch event to start Bến Xe Miền Tây audio track instantly
+    // Dispatch event to start Nơi Em Về Làm Dâu audio track instantly
     window.dispatchEvent(new CustomEvent('play-wedding-music'));
 
     if (onOpen) onOpen();
